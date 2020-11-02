@@ -18,14 +18,13 @@ var sfxWrong = new Audio("assets/sfx/incorrect.wav");
 
 function startQuiz() {
   // hide start screen
-  var startScreenEl = document.querySelector("#start-screen");
-  startScreenEl.setAttribute("class", "hide");
+
   // un-hide questions section
-  questionsEl.setAttribute("class", "show");
+
   // start timer
-  timerId = setInterval(clockTick, 1000);
+
   // show starting time
-  timerEl.textContent = time;
+
   getQuestion();
 }
 

@@ -23,9 +23,9 @@ function startQuiz() {
   // un-hide questions section
   questionsEl.setAttribute("class", "show");
   // start timer
-  timerId = setInterval(clockTick, 1000);
+
   // show starting time
-  timerEl.textContent = time;
+
   getQuestion();
 }
 

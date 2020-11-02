@@ -27,6 +27,7 @@ function startQuiz() {
   // show starting time
   timerEl.textContent = time;
   getQuestion();
+  
 }
 
 function getQuestion() {
