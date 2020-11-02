@@ -43,16 +43,6 @@ function getQuestion() {
   // create new button for each choice
   // attach click event listener to each choice
   // display on the page
-  for (const choices of questions[currentQuestionIndex].choices) {
-    var button = document.createElement('button');
-    button.setAttribute('class', "button");
-    button.innerHTML = choices;
-    document.querySelector("#choices").append(button);
-  }
-  document.querySelector('#choices').addEventListener('click', function (event) {
-    event.stopPropagation()
-    questionClick(event.target.innerHTML);
-  })
 }
 
 function questionClick() {

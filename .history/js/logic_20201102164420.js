@@ -33,26 +33,11 @@ function getQuestion() {
   // get current question object from array
   var currentQuestion = questions[currentQuestionIndex].title;
   // update title with current question
-  let questionTitleElement = document.querySelector("#question-title");
-  questionTitleElement.innerHTML = currentQuestion;
-  questionsEl.setAttribute('class', 'show');
-  choicesEl.setAttribute('class', 'choices show');
   // clear out any old question choices
-  choicesEl.innerHTML = " ";
   // loop over choices
   // create new button for each choice
   // attach click event listener to each choice
   // display on the page
-  for (const choices of questions[currentQuestionIndex].choices) {
-    var button = document.createElement('button');
-    button.setAttribute('class', "button");
-    button.innerHTML = choices;
-    document.querySelector("#choices").append(button);
-  }
-  document.querySelector('#choices').addEventListener('click', function (event) {
-    event.stopPropagation()
-    questionClick(event.target.innerHTML);
-  })
 }
 
 function questionClick() {
