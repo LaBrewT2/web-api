@@ -110,27 +110,15 @@ function clockTick() {
   time--;
   timerEl.textContent = time;
   // check if user ran out of time
-  if (time <= 0) {
-    quizEnd();
-  }
 }
 
 function saveHighscore() {
-  // get value of input 
-  var initials = initialsEl.value.trim();
+  // get value of input box
   // make sure value wasn't empty
-  if (initials !== " ") {
   // get saved scores from localstorage, or if not any, set to empty array
-  var highscores = JSON.parse(window.localStorage.getItem("highscores")) || [];
   // format new score object for current user
-  var newScore = {
-    score: time,
-    initials: initials
-  };
   // save to localstorage
-  window.localStorage.setItem("highscores", JSON.stringify(newScore.score));
   // redirect to next page
-  window.location.href = "highscores.html";
 }
 
 function checkForEnter(event) {

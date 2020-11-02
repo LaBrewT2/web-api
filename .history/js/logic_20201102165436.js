@@ -128,9 +128,7 @@ function saveHighscore() {
     initials: initials
   };
   // save to localstorage
-  window.localStorage.setItem("highscores", JSON.stringify(newScore.score));
   // redirect to next page
-  window.location.href = "highscores.html";
 }
 
 function checkForEnter(event) {
