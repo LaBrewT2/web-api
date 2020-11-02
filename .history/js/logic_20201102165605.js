@@ -137,10 +137,7 @@ function saveHighscore() {
 function checkForEnter(event) {
   // check if event key is enter
   // saveHighscore
-  if (event.key === "enter") {
-    saveHighscore();
-  }
-}
+  
 }
 
 // user clicks button to submit initials
