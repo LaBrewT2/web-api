@@ -71,25 +71,12 @@ function questionClick() {
   // else
 } else {
   // play "right" sound effect
-  sfxRight.play();
-    feedbackEl.textContent = "CORRECT!";
-  }
   // flash right/wrong feedback on page for half a second
-  feedbackEl.setAttribute("class", "feedback");
-  setTimeout(function () {
-    feedbackEl.setAttribute("class", "feedback hide");
-  }, 1000);
   // move to next question
-  currentQuestionIndex++;
   // check if we've run out of questions
-  if (currentQuestionIndex === questions.length) {
   // quizEnd
-  quizEnd();
   // else
-} else {
   // getQuestion
-    getQuestion();
-  }
 }
 
 function quizEnd() {

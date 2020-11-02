@@ -83,11 +83,13 @@ function questionClick() {
   currentQuestionIndex++;
   // check if we've run out of questions
   if (currentQuestionIndex === questions.length) {
+    quizEnd();
   // quizEnd
-  quizEnd();
   // else
 } else {
   // getQuestion
+  
+  
     getQuestion();
   }
 }

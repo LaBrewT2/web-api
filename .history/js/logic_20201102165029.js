@@ -80,16 +80,10 @@ function questionClick() {
     feedbackEl.setAttribute("class", "feedback hide");
   }, 1000);
   // move to next question
-  currentQuestionIndex++;
   // check if we've run out of questions
-  if (currentQuestionIndex === questions.length) {
   // quizEnd
-  quizEnd();
   // else
-} else {
   // getQuestion
-    getQuestion();
-  }
 }
 
 function quizEnd() {

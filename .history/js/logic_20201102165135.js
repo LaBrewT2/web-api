@@ -88,6 +88,8 @@ function questionClick() {
   // else
 } else {
   // getQuestion
+  
+  
     getQuestion();
   }
 }
