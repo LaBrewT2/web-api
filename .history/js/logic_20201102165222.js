@@ -96,13 +96,8 @@ function quizEnd() {
   // stop timer
   clearInterval(timerId);
   // show end screen
-  var endScreenEl = document.getElementById("end-screen");
-  endScreenEl.removeAttribute("class");
   // show final score
-  var finalScoreEl = document.getElementById("final-score");
-  finalScoreEl.textContent = time;
   // hide questions section
-  questionsEl.setAttribute("class", "hide");
 }
 
 function clockTick() {
