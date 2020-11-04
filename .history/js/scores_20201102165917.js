@@ -21,4 +21,3 @@ function clearHighscores() {
 // attache clear event to clear score button
 
 // run printhighscore when page loads
-window.onload = printHighscores;

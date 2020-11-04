@@ -9,9 +9,6 @@ function printHighscores() {
     var liTag = document.createElement("li");
     liTag.textContent = score.initials + "-" + score.score;
     // display on page
-    var olEl = document.createElementId("highscores");
-    olEl.appendChild(liTag);
-  });
 }
 
 function clearHighscores() {
@@ -21,4 +18,3 @@ function clearHighscores() {
 // attache clear event to clear score button
 
 // run printhighscore when page loads
-window.onload = printHighscores;
