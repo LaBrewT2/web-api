@@ -37,7 +37,6 @@ function getQuestion() {
   // clear out any old question choices
   choicesEl.innerHTML = " ";
   // loop over choices
-  for (var i = 0; i < question.choices.length; i++) {
   // create new button for each choice
   // attach click event listener to each choice
   // display on the page

@@ -32,12 +32,13 @@ function getQuestion() {
   // get current question object from array
   var currentQuestion = questions[currentQuestionIndex].title;
   // update title with current question
-  var titleEl = document.getElementById("question-title");
-  titleEl.textContent = question.title;
+  let questionTitleElement = document.querySelector("#question-title");
+  questionTitleElement.innerHTML = currentQuestion;
+  questionsEl.setAttribute('class', 'show');
+  choicesEl.setAttribute('class', 'choices show');
   // clear out any old question choices
   choicesEl.innerHTML = " ";
   // loop over choices
-  for (var i = 0; i < question.choices.length; i++) {
   // create new button for each choice
   // attach click event listener to each choice
   // display on the page
