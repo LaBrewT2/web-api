@@ -125,8 +125,8 @@ function saveHighscore() {
   window.localStorage.setItem("highscores", JSON.stringify(newScore.score));
   // redirect to next page
   window.location.href = "highscores.html";
-};
-};
+}
+}
 
 function checkForEnter(event) {
   // check if event key is enter

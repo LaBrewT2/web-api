@@ -125,8 +125,8 @@ function saveHighscore() {
   window.localStorage.setItem("highscores", JSON.stringify(newScore.score));
   // redirect to next page
   window.location.href = "highscores.html";
-};
-};
+}
+}
 
 function checkForEnter(event) {
   // check if event key is enter
@@ -134,7 +134,7 @@ function checkForEnter(event) {
   if (event.key === "enter") {
     saveHighscore();
   };
-};
+}
 
 // user clicks button to submit initials
 submitBtn.onclick = saveHighscore;

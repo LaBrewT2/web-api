@@ -106,8 +106,8 @@ function clockTick() {
   // check if user ran out of time
   if (time <= 0) {
     quizEnd();
-  };
-};
+  }
+}
 
 function saveHighscore() {
   // get value of input 
@@ -125,16 +125,16 @@ function saveHighscore() {
   window.localStorage.setItem("highscores", JSON.stringify(newScore.score));
   // redirect to next page
   window.location.href = "highscores.html";
-};
-};
+}
+}
 
 function checkForEnter(event) {
   // check if event key is enter
   // saveHighscore
   if (event.key === "enter") {
     saveHighscore();
-  };
-};
+  }
+}
 
 // user clicks button to submit initials
 submitBtn.onclick = saveHighscore;

@@ -54,37 +54,36 @@ function questionClick() {
   if (answer !== questions[currentQuestionIndex].answer) {
   // penalize time
   time = time -10;
-  
+  }
   // display new time on page
   timerEl.textContent = time;
   // play "wrong" sound effect
   sfxWrong.play();
   feedbackEl.textContent = "WRONG!";
-};
+}
   // else
 else {
   // play "right" sound effect
   sfxRight.play();
     feedbackEl.textContent = "CORRECT!";
-  };
+  }
   // flash right/wrong feedback on page for half a second
   feedbackEl.setAttribute("class", "feedback");
   setTimeout(function () {
     feedbackEl.setAttribute("class", "feedback hide");
   }, 1000);
   // move to next question
-  currentQuestionIndex = currentQuestionIndex + 1;
+  currentQuestionIndex++;
   // check if we've run out of questions
   if (currentQuestionIndex === questions.length) {
   // quizEnd
   quizEnd();
-  };
+  }
   // else
  else {
   // getQuestion
     getQuestion();
   };
-};
 
 function quizEnd() {
   // stop timer
@@ -106,8 +105,8 @@ function clockTick() {
   // check if user ran out of time
   if (time <= 0) {
     quizEnd();
-  };
-};
+  }
+}
 
 function saveHighscore() {
   // get value of input 
@@ -125,16 +124,16 @@ function saveHighscore() {
   window.localStorage.setItem("highscores", JSON.stringify(newScore.score));
   // redirect to next page
   window.location.href = "highscores.html";
-};
-};
+}
+}
 
 function checkForEnter(event) {
   // check if event key is enter
   // saveHighscore
   if (event.key === "enter") {
     saveHighscore();
-  };
-};
+  }
+}
 
 // user clicks button to submit initials
 submitBtn.onclick = saveHighscore;
