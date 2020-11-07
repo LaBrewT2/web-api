@@ -46,8 +46,9 @@ function getQuestion() {
     choicesEl.appendChild(answerButton);
   // attach click event listener to each choice
   // display on the page
-  };
-};
+  
+  })
+}
 
 function questionClick() {
   // check if user guessed wrong

@@ -20,7 +20,7 @@ function startQuiz() {
   // hide start screen
   document.getElementById("start-screen").style.display = "none";
   // un-hide questions section
-  document.getElementById("questions").style.display = "block";
+  questionsEl..style.display = "block";
   // start timer
   timerId = setInterval(clockTick, 1000);
   // show starting time
@@ -30,7 +30,7 @@ function startQuiz() {
 
 function getQuestion() {
   // get current question object from array
-  var question = questions[currentQuestionIndex];
+  var questions = questions[currentQuestionIndex].title;
   // update title with current question
   var titleEl = document.getElementById("question-title");
   titleEl.textContent = question.title;
@@ -39,15 +39,19 @@ function getQuestion() {
   // loop over choices
   for (var i = 0; i < question.choices.length; i++) {
   // create new button for each choice
-  var answerButton = document.createElement("button");
-    answerButton.innerText = question.choices[i];
-    answerButton.setAttribute('value', question.choices[i]);
-    answerButton.onclick = questionClick
-    choicesEl.appendChild(answerButton);
   // attach click event listener to each choice
   // display on the page
-  };
-};
+  for (const choices of questions[currentQuestionIndex].choices) {
+    var button = document.createElement('button');
+    button.setAttribute('class', "button");
+    button.innerHTML = choices;
+    document.querySelector("#choices").append(button);
+  }
+  document.querySelector('#choices').addEventListener('click', function (event) {
+    event.stopPropagation()
+    questionClick(event.target.innerHTML);
+  })
+}
 
 function questionClick() {
   // check if user guessed wrong
